@@ -1,32 +1,49 @@
-Median of Two Sorted Arrays
+Smallest Divisible Digit Product II
 
-Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
+Hint
+You are given a string num which represents a positive integer, and an integer t.
 
-The overall run time complexity should be O(log (m+n)).
+A number is called zero-free if none of its digits are 0.
+
+Return a string representing the smallest zero-free number greater than or equal to num such that the product of its digits is divisible by t. If no such number exists, return "-1".
 
  
 
 Example 1:
 
-Input: nums1 = [1,3], nums2 = [2]
-Output: 2.00000
-Explanation: merged array = [1,2,3] and median is 2.
+Input: num = "1234", t = 256
+
+Output: "1488"
+
+Explanation:
+
+The smallest zero-free number that is greater than 1234 and has the product of its digits divisible by 256 is 1488, with the product of its digits equal to 256.
+
 Example 2:
 
-Input: nums1 = [1,2], nums2 = [3,4]
-Output: 2.50000
-Explanation: merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.
+Input: num = "12355", t = 50
+
+Output: "12355"
+
+Explanation:
+
+12355 is already zero-free and has the product of its digits divisible by 50, with the product of its digits equal to 150.
+
+Example 3:
+
+Input: num = "11111", t = 26
+
+Output: "-1"
+
+Explanation:
+
+No number greater than 11111 has the product of its digits divisible by 26.
+
  
 
 Constraints:
 
-nums1.length == m
-nums2.length == n
-0 <= m <= 1000
-0 <= n <= 1000
-1 <= m + n <= 2000
--106 <= nums1[i], nums2[i] <= 106
-
-Requirement:
-- The function name should be median_of_sorted_arrays
-- File name should be median_of_sorted_arrays.py
+2 <= num.length <= 2 * 105
+num consists only of digits in the range ['0', '9'].
+num does not contain leading zeros.
+1 <= t <= 1014
